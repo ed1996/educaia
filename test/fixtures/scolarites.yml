@@ -1,0 +1,39 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  filiere: MyString
+  français: 1.5
+  philosophie: 1.5
+  histoiregeo: 1.5
+  lv1: 1.5
+  lv2: 1.5
+  eps: 1.5
+  mathematique: 1.5
+  physiquechimie: 1.5
+  svt: 1.5
+  ses: 1.5
+  spemath: 1.5
+  spesvt: 1.5
+  spephysique: 1.5
+  tpe: 1.5
+  lv3: 1.5
+  user: one
+
+two:
+  filiere: MyString
+  français: 1.5
+  philosophie: 1.5
+  histoiregeo: 1.5
+  lv1: 1.5
+  lv2: 1.5
+  eps: 1.5
+  mathematique: 1.5
+  physiquechimie: 1.5
+  svt: 1.5
+  ses: 1.5
+  spemath: 1.5
+  spesvt: 1.5
+  spephysique: 1.5
+  tpe: 1.5
+  lv3: 1.5
+  user: two

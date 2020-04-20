@@ -10,7 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200420135457) do
+ActiveRecord::Schema.define(version: 20200420203833) do
+
+  create_table "scolarites", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "filiere"
+    t.float "francais", limit: 24
+    t.float "philosophie", limit: 24
+    t.float "histoiregeo", limit: 24
+    t.float "lv1", limit: 24
+    t.float "lv2", limit: 24
+    t.float "eps", limit: 24
+    t.float "mathematique", limit: 24
+    t.float "physiquechimie", limit: 24
+    t.float "svt", limit: 24
+    t.float "ses", limit: 24
+    t.float "spemath", limit: 24
+    t.float "spesvt", limit: 24
+    t.float "spephysique", limit: 24
+    t.float "tpe", limit: 24
+    t.float "lv3", limit: 24
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_scolarites_on_user_id"
+  end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "email", default: "", null: false
@@ -20,8 +43,10 @@ ActiveRecord::Schema.define(version: 20200420135457) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "fullname"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "scolarites", "users"
 end

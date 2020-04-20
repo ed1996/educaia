@@ -1,0 +1,23 @@
+<%= form_for @scolarite do |f| %>
+  <label>Filière</label>
+  <%= f.select :filiere, [["S","S"],["ES","ES"],["L","L"]], id: "filiere", prompt:"A Selectionner", class:"form-control" %>
+
+  <%= f.text_field :francais, placeholder:"Français", class:"form-group" %>
+  <%= f.text_field :philosophie, placeholder:"philosophie", class:"form-group" %>
+  <%= f.text_field :histoiregeo, placeholder:"histoiregeo", class:"form-group" %>
+  <%= f.text_field :lv1, placeholder:"lv1", class:"form-group" %>
+  <%= f.text_field :lv2, placeholder:"lv2", class:"form-group" %>
+  <%= f.text_field :eps, placeholder:"eps", class:"form-group" %>
+  <%= f.text_field :mathematique, placeholder:"mathematique", class:"form-group" %>
+  <%= f.text_field :physiquechimie, placeholder:"physiquechimie", class:"form-group" %>
+  <%= f.text_field :svt, placeholder:"svt", class:"form-group" %>
+  <%= f.text_field :ses, placeholder:"ses", class:"form-group" %>
+  <%= f.text_field :spemath, placeholder:"spemath", class:"form-group" %>
+  <%= f.text_field :spesvt, placeholder:"spesvt", class:"form-group" %>
+  <%= f.text_field :spephysique, placeholder:"spephysique", class:"form-group" %>
+  <%= f.text_field :tpe, placeholder:"tpe", class:"form-group" %>
+  <%= f.text_field :lv3, placeholder:"lv3", class:"form-group" %>
+
+  <%= f.submit "Je valide mes notes", class:"btn btn-primary" %>
+
+<% end %>
