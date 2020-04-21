@@ -9,10 +9,10 @@ ActiveAdmin.register Scolarite do
   #
   # or
   #
-  # permit_params do
-  #   permitted = [:filiere, :francais, :philosophie, :histoiregeo, :lv1, :lv2, :eps, :mathematique, :physiquechimie, :svt, :ses, :spemath, :spesvt, :spephysique, :tpe, :lv3, :user_id]
-  #   permitted << :other if params[:action] == 'create' && current_user.admin?
-  #   permitted
-  # end
+   permit_params do
+     permitted = [:filiere, :francais, :philosophie, :histoiregeo, :lv1, :lv2, :eps, :mathematique, :physiquechimie, :svt, :ses, :spemath, :spesvt, :spephysique, :tpe, :lv3, :user_id]
+     permitted << :other if params[:action] == 'create'
+     permitted
+   end
   
 end

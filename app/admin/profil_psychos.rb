@@ -9,10 +9,10 @@ ActiveAdmin.register ProfilPsycho do
   #
   # or
   #
-  # permit_params do
-  #   permitted = [:title, :body]
-  #   permitted << :other if params[:action] == 'create' && current_user.admin?
-  #   permitted
-  # end
+   permit_params do
+     permitted = [:title, :body]
+     permitted << :other if params[:action] == 'create'
+     permitted
+   end
   
 end
