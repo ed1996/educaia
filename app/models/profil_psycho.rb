@@ -1,0 +1,2 @@
+class ProfilPsycho < ApplicationRecord
+end

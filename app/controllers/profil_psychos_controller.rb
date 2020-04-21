@@ -1,0 +1,2 @@
+class ProfilPsychosController < ApplicationController
+end

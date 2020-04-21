@@ -1,0 +1,2 @@
+module ProfilPsychosHelper
+end
