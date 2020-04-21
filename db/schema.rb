@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200421092408) do
+ActiveRecord::Schema.define(version: 20200421144934) do
 
   create_table "active_admin_comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "namespace"
@@ -43,6 +43,23 @@ ActiveRecord::Schema.define(version: 20200421092408) do
     t.text "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "mbtis", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "question1"
+    t.string "question2"
+    t.string "question3"
+    t.string "question4"
+    t.string "question5"
+    t.string "question6"
+    t.string "question7"
+    t.string "question8"
+    t.string "question9"
+    t.string "question10"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_mbtis_on_user_id"
   end
 
   create_table "profil_psychos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -88,5 +105,6 @@ ActiveRecord::Schema.define(version: 20200421092408) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "mbtis", "users"
   add_foreign_key "scolarites", "users"
 end

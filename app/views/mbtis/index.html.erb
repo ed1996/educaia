@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="col-md-3">
+    <ul class="sidebar-list">
+      <li class="sidebar-item"><%= link_to 'Profil', user_path(current_user.id) %></li>
+      <li class="sidebar-item"><%= link_to 'Ma scolarité', scolarites_path %></li>
+      <li class="sidebar-item"><%= link_to 'Mon profil MBTI', mbti_path(current_user.id) %></li>
+    </ul>
+  </div>
+  <div class="col-md-9">
+    <div class="panel panel-default">
+      <div class="panel-heading"> Ma scolarité</div>
+      <div class="panel-body">
+        <% @mbtis.each do |mbti| %>
+          <div class="col-md-9">
+            <p>Question 1 : <%= mbti.question1 %></p>
+            <p>Question 2 : <%= mbti.question2 %></p>
+            <p>Question 3 : <%= mbti.question3 %></p>
+            <p>Question 4 : <%= mbti.question4 %></p>
+            <p>Question 5 : <%= mbti.question5 %></p>
+            <p>Question 6 : <%= mbti.question6 %></p>
+            <p>Question 7 : <%= mbti.question7 %></p>
+            <p>Question 8 : <%= mbti.question8 %></p>
+            <p>Question 9 : <%= mbti.question9 %></p>
+            <p>Question 10 : <%= mbti.question10 %></p>
+
+            <% if mbti.question1 == 'A' && mbti.question2 == 'B' %>
+              <h3>Résultat : ENFJ</h3>
+            <% else %>
+              <h3>Résultat : ENFP</h3>
+            <% end %>
+          </div>
+          <div class="col-md-3 right">
+            <%= link_to 'Modifier mon MBTI', edit_mbti_path(mbti), class:"btn btn-primary" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

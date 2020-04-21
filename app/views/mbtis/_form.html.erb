@@ -1,0 +1,36 @@
+<%= form_for @mbti do |f| %>
+  <label>Est-il plutôt : A) Facile de vous connaitre, ou B) difficile de vous connaitre ?</label><br>
+  <%= f.select :question1, [["A","A"],["B","B"]], id: "question1", prompt:"A Selectionner", class:"form-control" %>
+  <br>
+  <label>En accomplissant une tache, avez-vous tendance à A) commencer tôt, de manière à pouvoir terminer en avance, ou B) travailler plus rapidement à la dernière minute?</label><br>
+  <%= f.select :question2, [["A","A"],["B","B"]], id: "question2", prompt:"A Selectionner", class:"form-control" %>
+  <br>
+  <label>Trouvez-vous  A) qu'il vous est facile de parler à pratiquement tout le monde aussi longtemps qu'il le faut, ou B) que vous n'avez pas beaucoup de choses à dire à certaines personnes dans certaines circonstances ?</label><br>
+  <%= f.select :question3, [["A","A"],["B","B"]], id: "question3", prompt:"A Selectionner", class:"form-control" %>
+  <br>
+  <label>Préferez-vous que l'on vous considère comme quelqu'un de  A) pratique, ou B) d'ingénieux ?</label><br>
+  <%= f.select :question4, [["A","A"],["B","B"]], id: "question4", prompt:"A Selectionner", class:"form-control" %>
+  <br>
+  <label>Etes-vous généralement  A) sociable et ouvert, ou B) plutôt discret et réservé ?</label><br>
+  <%= f.select :question5, [["A","A"],["B","B"]], id: "question5", prompt:"A Selectionner", class:"form-control" %>
+  <br>
+  <label>Est-ce un plus beau compliment, de dire de quelqu'un qu'il est doué de  A) visoin, ou B) bon sens ?</label><br>
+  <%= f.select :question6, [["A","A"],["B","B"]], id: "question6", prompt:"A Selectionner", class:"form-control" %>
+<br>
+  <label>Pretez-vous davantage attention A) aux sentiments des gens, ou B) à leurs droits ?</label><br>
+  <%= f.select :question7, [["A","A"],["B","B"]], id: "question7", prompt:"A Selectionner", class:"form-control" %>
+<br>
+  <label>A une soirée, aimez-vous A) aider à ce que ça bouge, ou B) laisser les autres s'amuser à leur manière ?</label><br>
+  <%= f.select :question8, [["A","A"],["B","B"]], id: "question8", prompt:"A Selectionner", class:"form-control" %>
+  <br>
+  <label>En général, préférez-vous A) Organiser vos rendez-vous à l'avance, ou B) être libre de faire ce que vous désirez sous l'impulsion du moment ?</label><br>
+  <%= f.select :question9, [["A","A"],["B","B"]], id: "question9", prompt:"A Selectionner", class:"form-control" %>
+  <br>
+  <label>Lorsque vous êtes avec vos amis parlez-vous A) plus que les autres, ou B) moins que les autres ?</label><br>
+  <%= f.select :question10, [["A","A"],["B","B"]], id: "question10", prompt:"A Selectionner", class:"form-control" %>
+
+
+<br><br>
+  <%= f.submit "Je valide mon questionnaire", class:"btn btn-primary" %>
+
+<% end %>

@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="col-md-3">
+    <ul class="sidebar-list">
+      <li class="sidebar-item"><%= link_to 'Profil', user_path(current_user.id) %></li>
+      <li class="sidebar-item"><%= link_to 'Ma scolarité', scolarites_path %></li>
+      <li class="sidebar-item"><%= link_to 'Mon profil MBTI', mbtis_path %></li>
+    </ul>
+  </div>
+  <div class="col-md-9">
+    <div class="panel panel-default">
+      <div class="panel-heading"> Ma scolarité</div>
+      <div class="panel-body">
+        <% @scolarites.each do |scolarite| %>
+        <div class="col-md-9">
+          <p>Filière : <%= scolarite.filiere %></p>
+          <p>Français : <%= scolarite.francais %></p>
+          <p>Philosophie : <%= scolarite.philosophie %></p>
+          <p>Histoire géographie<%= scolarite.histoiregeo %></p>
+          <p>lv1 : <%= scolarite.lv1 %></p>
+          <p>lv2 : <%= scolarite.lv2 %></p>
+          <p>eps : <%= scolarite.eps %></p>
+          <p>Mathématique : <%= scolarite.mathematique %></p>
+          <p>Physique-chimie : <%= scolarite.physiquechimie %></p>
+          <p>svt : <%= scolarite.svt %></p>
+          <p>Sciences économiques et sociales : <%= scolarite.ses %></p>
+          <p>spémath : <%= scolarite.spemath %></p>
+          <p>spesvt : <%= scolarite.spesvt %></p>
+          <p>spephysique : <%= scolarite.spephysique %></p>
+          <p>TPE : <%= scolarite.tpe %></p>
+          <p>lv3 : <%= scolarite.lv3 %></p>
+        </div>
+          <div class="col-md-3 right">
+            <%= link_to 'Modifier ma scolarité', edit_scolarite_path(scolarite), class:"btn btn-primary" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
