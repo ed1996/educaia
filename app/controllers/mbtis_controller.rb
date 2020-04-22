@@ -1,6 +1,6 @@
 class MbtisController < ApplicationController
 
-  before_action :set_mbti, only: [:show, :edit, :update]
+  before_action :set_mbti, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:show]
 
   def index
@@ -34,6 +34,11 @@ class MbtisController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def destroy
+    @mbti.destroy
+    redirect_to mbtis_path, danger: "Article supprimer avec succès"
   end
 
   private

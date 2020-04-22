@@ -1,6 +1,6 @@
 class ScolaritesController < ApplicationController
 
-  before_action :set_scolarite, only: [:show, :edit, :update]
+  before_action :set_scolarite, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:show]
 
   def index
@@ -34,6 +34,11 @@ class ScolaritesController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def destroy
+    @scolarite.destroy
+    redirect_to scolarites_path, danger: "Article supprimer avec succès"
   end
 
   private

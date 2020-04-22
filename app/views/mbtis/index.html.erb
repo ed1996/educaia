@@ -30,7 +30,8 @@
             <% end %>
           </div>
           <div class="col-md-3 right">
-            <%= link_to 'Modifier mon MBTI', edit_mbti_path(mbti), class:"btn btn-primary" %>
+            <%= link_to 'Modifier mon MBTI', edit_mbti_path(mbti), class:"btn btn-primary" %><br>
+            <%= link_to 'Supprimer', mbti_path(mbti), class:"btn btn-primary", :method => :delete %>
           </div>
         <% end %>
       </div>

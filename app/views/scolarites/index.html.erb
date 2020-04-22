@@ -30,7 +30,8 @@
           <p>lv3 : <%= scolarite.lv3 %></p>
         </div>
           <div class="col-md-3 right">
-            <%= link_to 'Modifier ma scolarité', edit_scolarite_path(scolarite), class:"btn btn-primary" %>
+            <%= link_to 'Modifier ma scolarité', edit_scolarite_path(scolarite), class:"btn btn-primary" %><br>
+            <%= link_to 'Supprimer', scolarite_path(scolarite), class:"btn btn-primary", :method => :delete %>
           </div>
         <% end %>
       </div>
