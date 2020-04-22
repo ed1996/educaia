@@ -7,11 +7,13 @@
     <tr>
       <th>Diplôme</th>
       <th>intitulé du parcours </th>
+      <th>Profil</th>
     </tr>
     <% @formations.each do |formation| %>
       <tr>
         <td><%= formation.title %></td>
         <td><%= formation.body %></td>
+        <td><%= formation.profil %></td>
       </tr>
     <% end %>
   </table>
