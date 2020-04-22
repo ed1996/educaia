@@ -8,43 +8,24 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Project name</a>
+      <a class="navbar-brand" href="#">EDUCAIA</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li><%= link_to 'Accueil', root_path %></li>
-        <li><a href="#">Formations</a></li>
-        <li><a href="#">A propos</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li class="dropdown-header">Nav header</li>
-            <li><a href="#">Separated link</a></li>
-            <li><a href="#">One more separated link</a></li>
-          </ul>
-        </li>
+        <li><%= link_to 'Formations', formations_path %></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <% if (!user_signed_in?) %>
           <li><%= link_to 'Inscription', new_user_registration_path %></li>
           <li><%= link_to 'Connexion', new_user_session_path %></li>
         <% else %>
-          <li><%= current_user.email %></li>
-          <li><%= link_to 'Profil', user_path(current_user.id) %></li>
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profil <span class="caret"></span></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= current_user.fullname %><span class="caret"></span></a>
             <ul class="dropdown-menu">
+              <li><%= link_to 'Profil', user_path(current_user.id) %></li>
               <li><%= link_to 'Ma scolarite', scolarites_path %></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li role="separator" class="divider"></li>
-              <li class="dropdown-header">Nav header</li>
-              <li><a href="#">Separated link</a></li>
-              <li><a href="#">One more separated link</a></li>
+              <li><%= link_to 'Mon profil MBTI', mbtis_path %></li>
             </ul>
           </li>
           <li><%= link_to 'Modifier profil', edit_user_registration_path %></li>

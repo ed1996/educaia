@@ -1,0 +1,19 @@
+
+
+<div class = "panel panel-default">
+  <div class = "panel-heading">Formations</div>
+
+  <table class = "table">
+    <tr>
+      <th>Diplôme</th>
+      <th>intitulé du parcours </th>
+    </tr>
+    <% @formations.each do |formation| %>
+      <tr>
+        <td><%= formation.title %></td>
+        <td><%= formation.body %></td>
+      </tr>
+    <% end %>
+  </table>
+
+</div>
