@@ -13,4 +13,6 @@ Rails.application.routes.draw do
   resources :mbtis
   resources :formations
 
+ resources :profil_psychos
 end
+
