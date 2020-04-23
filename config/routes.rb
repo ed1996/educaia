@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   resources :scolarites
   resources :mbtis
   resources :formations
+  resources :recommandations
 
  resources :profil_psychos
 end
