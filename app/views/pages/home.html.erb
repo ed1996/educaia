@@ -63,6 +63,13 @@
         <div class="col-md-6">
           <br><br> <br><br><br><br>
           <p class="mt30"><%= link_to 'Inscription', new_user_registration_path, :class => "btn btn-primary btn-theme page-scroll" %></p>
+          <%= button_to 'Scrape', scrape_deaths_path %>
+          <h3 class="title"><%= @formattedrate %></h3>
+
+          <% @entries.each do |i| %>
+          <%= @nom = i.css('span').text %><br>
+          <% end %>
+
         </div>
 
         <div class="col-md-6">

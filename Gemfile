@@ -24,6 +24,8 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'devise-i18n'
 gem 'activeadmin'
+gem 'kimurai'
+gem 'nokogiri'
 
 
 # Use CoffeeScript for .coffee assets and views

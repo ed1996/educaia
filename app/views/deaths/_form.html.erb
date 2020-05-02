@@ -1,0 +1,32 @@
+<%= form_with(model: death, local: true) do |form| %>
+  <% if death.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(death.errors.count, "error") %> prohibited this death from being saved:</h2>
+
+      <ul>
+      <% death.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Name %>
+    <%= form.text_field :Name, id: :death_Name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Age %>
+    <%= form.text_field :Age, id: :death_Age %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Lieu %>
+    <%= form.text_field :Lieu, id: :death_Lieu %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

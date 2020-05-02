@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :deaths
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
@@ -15,5 +16,10 @@ Rails.application.routes.draw do
   resources :recommandations
 
  resources :profil_psychos
+
+  resources :deaths do
+    match '/scrape', to: 'deaths#scrape', via: :post, on: :collection
+  end
+
 end
 
