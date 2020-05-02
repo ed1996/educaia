@@ -8,4 +8,10 @@ class User < ApplicationRecord
 
   has_many :scolarites
   has_many :mbtis
+
+  after_create :send_admin_mail
+  def send_admin_mail
+    UserNotifierMailer.send_signup_email(self).deliver
+  end
+
 end
