@@ -6,7 +6,7 @@ class UsersController < ApplicationController
 
   def create
     # Create the user from params
-    @user = User.new(params[:user])
+    @user = User.new(user_params)
     if @user.save
       # Deliver the signup email
       UserNotifierMailer.send_signup_email(@user).deliver
@@ -19,7 +19,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:fullname, :email)
+    params.require(:user).permit(:password, :email, :fullname)
   end
 
 end
