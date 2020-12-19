@@ -27,6 +27,7 @@ gem 'activeadmin'
 gem 'kimurai'
 gem 'nokogiri'
 gem 'mail_form'
+gem 'sendgrid-ruby'
 
 
 # Use CoffeeScript for .coffee assets and views
