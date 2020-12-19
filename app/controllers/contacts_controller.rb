@@ -4,8 +4,6 @@ class ContactsController < ApplicationController
   end
 
   def create
-    puts "SENDGRID_USERNAME: #{ENV['SENDGRID_USERNAME']}"
-    puts "SENDGRID_PASSWORD: #{ENV['SENDGRID_PASSWORD']}"
     @contact = Contact.new(params[:contact])
     @contact.request = request
     if @contact.deliver
