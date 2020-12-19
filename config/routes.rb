@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   resources :mbtis
   resources :formations
   resources :recommandations
+  resources :contacts, only: [:new, :create]
 
  resources :profil_psychos
 
