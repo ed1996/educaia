@@ -26,6 +26,7 @@ gem 'devise-i18n'
 gem 'activeadmin'
 gem 'kimurai'
 gem 'nokogiri'
+gem 'mail_form'
 
 
 # Use CoffeeScript for .coffee assets and views
