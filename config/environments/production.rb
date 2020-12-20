@@ -4,6 +4,15 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.default_url_options = { :host => 'https://educaia.herokuapp.com/', :protocol => 'https'}
+  ActionMailer::Base.smtp_settings = {
+      :user_name => 'app168593625@heroku.com',
+      :password => '4976zoy84688',
+      :domain => 'heroku.com',
+      :address => 'smtp.sendgrid.net',
+      :port => '587',
+      :authentication => :plain,
+      :enable_starttls_auto => true
+  }
 
   # Settings specified here will take precedence over those in config/application.rb.
 
