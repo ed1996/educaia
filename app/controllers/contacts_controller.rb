@@ -1,4 +1,6 @@
 class ContactsController < ApplicationController
+  require 'sendgrid-ruby'
+  include SendGrid
   def new
     @contact = Contact.new
   end
